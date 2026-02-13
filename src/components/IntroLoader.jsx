@@ -4,33 +4,22 @@ export default function IntroLoader() {
   const fullText = "Welcome to My Portfolio";
   const [displayText, setDisplayText] = useState("");
   const [hide, setHide] = useState(false);
-  const [shouldShow, setShouldShow] = useState(false);
 
   useEffect(() => {
-    // localStorage'da "introShown" bor yoki yo'qligini tekshirish
-    const introShown = localStorage.getItem("introShown");
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      setDisplayText(fullText.slice(0, index + 1));
+      index++;
+      if (index === fullText.length) {
+        clearInterval(typingInterval);
+        setTimeout(() => {
+          setHide(true);
+        }, 1500);
+      }
+    }, 90);
 
-    if (!introShown) {
-      setShouldShow(true);
-
-      let index = 0;
-      const typingInterval = setInterval(() => {
-        setDisplayText(fullText.slice(0, index + 1));
-        index++;
-        if (index === fullText.length) {
-          clearInterval(typingInterval);
-          setTimeout(() => {
-            setHide(true);
-            localStorage.setItem("introShown", "true"); // endi keyinroq ko'rsatilmaydi
-          }, 1500);
-        }
-      }, 90);
-
-      return () => clearInterval(typingInterval);
-    }
+    return () => clearInterval(typingInterval);
   }, []);
-
-  if (!shouldShow) return null; // Agar intro allaqachon ko'rsatilgan bo'lsa, hech narsa qaytarmaymiz
 
   return (
     <div
@@ -45,3 +34,4 @@ export default function IntroLoader() {
     </div>
   );
 }
+
