@@ -49,9 +49,10 @@ export default function Navbar() {
                     </div>
                     <div>
                     </div>
-                    <main className='mt-28 container'>
+                    <main className='container'>
                         <Outlet />
                     </main>
+                    <div className="text-lg text-center mt-10 text-gray-500">© 2026 Fazliddin Portfolio. All rights reserved.</div>
                 </div>
             </ClickSpark>
         </>

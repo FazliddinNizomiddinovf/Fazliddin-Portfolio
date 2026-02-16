@@ -18,19 +18,6 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: #004aad; 
 }
-.active{
-  background-color: #f3f4f6;
-  color: #4770ff;
-  fill: #4770ff;
-  padding: 3px;
-  font-weight: 600;
-  hover:{
-    background-color: #f3f4f6;
-  color: #4770ff;
-  font-weight: 600;
-  fill: #4770ff;
-  }
-}
 .particles-container {
   position: relative;
   width: 100%;
