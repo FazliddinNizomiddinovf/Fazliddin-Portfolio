@@ -23,7 +23,7 @@ function App() {
     },
   ])
   return (
-    <div className='container'>
+    <div className='containers'>
       <IntroLoader/>
       <RouterProvider router={routes} />
     </div>
