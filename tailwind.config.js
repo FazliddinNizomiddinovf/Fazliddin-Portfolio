@@ -12,12 +12,16 @@ export default {
         sm: '640px',
         md: '768px',
         lg: '920px',
-        xl: '1184px'
+        xl: '1050px'
       }
     },
     extend: {
       screens: {
-        xxss: "400px"
+        xxss: "400px",
+        xxs: "460px",
+        xmx: "530px",
+        ccm: "730px",
+        xxc: "825px"
       },
     },
   },
