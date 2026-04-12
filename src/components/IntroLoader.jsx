@@ -27,7 +27,7 @@ export default function IntroLoader() {
         hide ? "opacity-0 blur-sm pointer-events-none" : "opacity-100"
       }`}
     >
-      <h1 className="text-7xl max-lg:text-5xl max-sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500">
+      <h1 className="text-7xl max-lg:text-5xl max-sm:text-4xl max-xxs:text-2xl max-xxss:text-1xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500">
         {displayText}
         <span className="ml-1 animate-pulse">|</span>
       </h1>
